@@ -1,0 +1,126 @@
+/*
+  Définition des variables CSS globales pour les couleurs principales utilisées sur le site
+*/
+:root {
+  --main-color: #4a4545; /* Couleur principale (violet) utilisée dans l'en-tête */
+  --light-bg: #f9f9f9;    /* Couleur de fond claire pour les sections */
+  --dark-text: #ece5e5;      /* Couleur de texte sombre pour une bonne lisibilité */
+}
+
+/*
+  Style général du corps de la page
+*/
+body {
+  font-family: 'Segoe UI', sans-serif; /* Police moderne et lisible */
+}
+
+/*
+  Style de l'en-tête
+*/
+header {
+  background-color: var(--main-color); /* Arrière-plan utilisant la couleur principale */
+  color: white;                         /* Texte en blanc pour contraste */
+  padding: 3rem 0;                      /* Espacement vertical */
+}
+
+/*
+  Style des liens de navigation dans l'en-tête
+*/
+.nav-link {
+  color: white !important; /* Forcer la couleur blanche pour les liens */
+}
+
+/*
+  Style des images dans les cartes produits
+*/
+.product-card img {
+  height: 200px;            
+  object-fit: cover;        
+}
+.product-card img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;               /* Hauteur fixe des images */
+  object-fit: cover;          /* Remplissage proportionnel de l'image */
+}
+
+/*
+  Style des cartes produits
+*/
+.product-card {
+  transition: transform 0.3s; /* Animation douce au survol */
+}
+
+.product-card:hover {
+  transform: scale(1.05);     /* Effet zoom léger au survol */
+}
+
+/*
+  Style du pied de page
+*/
+footer {
+  background-color: #8b8a8d;   /* Fond sombre */
+  color: white;             /* Texte blanc */
+  padding: 2rem 0;          /* Espacement vertical */
+}
+
+/*
+  Requête média pour améliorer l'affichage sur les petits écrans (moins de 768px)
+*/
+@media (max-width: 768px) {
+  .product-card img {
+    height: 150px; /* Réduction de la taille d'image pour les mobiles */
+  }
+}
+/* Animation douce à l'affichage des cartes produit */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(10);
+  }
+}
+
+.product-card {
+  animation: fadeInUp 0.8s ease forwards;
+}
+/* Thème sombre activé par la classe .dark-mode sur le body */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode header {
+  background-color: #333;
+}
+
+body.dark-mode .nav-link {
+  color: #fff !important;
+}
+
+body.dark-mode .product-card {
+  background-color: #ffffff;
+  border: 1px solid #f7f6f6;
+}
+
+body.dark-mode footer {
+  background-color: #111;
+}
+/* Effet visuel au survol du bouton */
+.btn-success:hover {
+  background-color: hwb(127 3% 4%);
+  border-color: #f5f5f7;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  .product-card p {
+    font-size: 0.9rem;
+  }
+}
