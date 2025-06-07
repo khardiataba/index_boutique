@@ -1,5 +1,5 @@
 # index_boutique
-site pour vente de produits cosmetiques  le  plus précisemment : essence_nomade
+site pour vente de produits cosmetiques  plus précisemment : essence_nomade
 PETITE_DESCRIPTION_DES_CHOIX_DE_CONCEPTION:
 Lors du développement du site Essence_nomade, plusieurs choix de conception ont été faits pour offrir une expérience utilisateur fluide, esthétique et responsive, que ce soit sur mobile ou sur ordinateur :
 
